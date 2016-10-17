@@ -1,0 +1,27 @@
+language: objective-c
+osx_image: xcode8
+
+env:
+  global:
+    - PROJECT=KGNDate
+  matrix:
+    - DESTINATION="OS=10.0,name=iPhone 6s Plus" SCHEME=$PROJECT-iOS SDK=iphonesimulator TEST=test
+    - DESTINATION="OS=10.0,name=Apple TV 1080p" SCHEME=$PROJECT-tvOS SDK=appletvsimulator TEST=test
+    - DESTINATION="OS=3.0,name=Apple Watch - 42mm" SCHEME=$PROJECT-watchOS SDK=watchsimulator TEST=
+
+  script:
+    - xcodebuild $TEST -project "$PROJECT.xcodeproj" -scheme "$SCHEME" -sdk $SDK -destination "$DESTINATION"
+
+  before_deploy:
+    - carthage build --no-skip-current
+    - carthage archive $PROJECT
+
+deploy:
+  provider: releases
+  api_key:
+    secure: diR95yFUfX0yk1qsLFo4FQqz/fnSjX0abJDYyynJAqeVm1vTJiDmeVcvPtrQXNeWcWE9q3HbaQjVKKNlpCs1pzyrjw3LbC3O8gAhy/5gtEQPOe2r5WQKgGYC5okXNisyXindw0ov2oREGWwE1sKjfhHqhD9P2YTCXOHiMEfWacrxoSVMNKFt558/9tnPvQVoSx5ZqmEYvrgtjSz89vu5oUp12rAR3p7BvCKns0Lea/KFzTnYRAs2i01UTOJca34SK7bKm8kebxvtqu7jGZ5Kmo9Pv1LPvLX0C3aZagGXeYALwFNGyK4byjlto9XEGqQvu1KFKgwAyMJniNVgFQ80IN9qZogvrN5Be6pM5QgvKyAC5WQsdA0X7983fnytGksknAMFlVAmK5397UoOUK519jOGHQVOwfLNqz7axB4M5AsynSk0LpZHfIrP/+ipwhNd3jZIz5SyRSgq9HhvqcXew+ZnlhRe1QDSOfWrOOTCn3EUc4bFggZp5ISSkrt3rDxGldeZTUp6RSMr38N+0fDmJV03+yrqIPv8chRaSA5ofD7zAagfnxQBk2/ZTRmeuIsOZGDGKJPxsPUkxcz1Uopjfk+0tvll991fY2jtdsJX+knXOG1RS64lQM7EelBVps45GeUS9IV82gsWB302vMqlwovAXkpNqPNQSQOhqh+PPoY=
+  file: $PROJECT.framework.zip
+  skip_cleanup: true
+  on:
+    repo: kgn/$PROJECT
+    tags: true
