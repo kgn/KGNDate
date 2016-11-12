@@ -14,7 +14,7 @@ public enum DateFormatLength {
     case long
 }
 
-private func _ordinal(_ value: Int) -> String {
+internal func _ordinal(_ value: Int) -> String {
     if value >= 11 && value <= 13 {
         return "th";
     }
@@ -67,10 +67,14 @@ extension Date {
         case .long: dateString += calendar.monthSymbols[monthValue-1]
         }
         
+        if day != .none && month != .none {
+            dateString += " "
+        }
+        
         switch day {
         case .none: break
-        case .short: dateString += " \(dayValue)"
-        case .long: dateString += " \(dayValue)\(_ordinal(dayValue))"
+        case .short: dateString += "\(dayValue)"
+        case .long: dateString += "\(dayValue)\(_ordinal(dayValue))"
         }
         
         switch year {
