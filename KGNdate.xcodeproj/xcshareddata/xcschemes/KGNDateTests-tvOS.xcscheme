@@ -19,7 +19,7 @@
                BlueprintIdentifier = "6412C2F11D2A0A4D00C78066"
                BuildableName = "KGNDateTests-tvOS.xctest"
                BlueprintName = "KGNDateTests-tvOS"
-               ReferencedContainer = "container:KGNdate.xcodeproj">
+               ReferencedContainer = "container:KGNDate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

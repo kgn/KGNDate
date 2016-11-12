@@ -17,7 +17,7 @@
                BlueprintIdentifier = "6412C2D81D29FE0E00C78066"
                BuildableName = "KGNDate.framework"
                BlueprintName = "KGNDate-tvOS"
-               ReferencedContainer = "container:KGNdate.xcodeproj">
+               ReferencedContainer = "container:KGNDate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "6412C2F11D2A0A4D00C78066"
                BuildableName = "KGNDateTests-tvOS.xctest"
                BlueprintName = "KGNDateTests-tvOS"
-               ReferencedContainer = "container:KGNdate.xcodeproj">
+               ReferencedContainer = "container:KGNDate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "6412C2D81D29FE0E00C78066"
             BuildableName = "KGNDate.framework"
             BlueprintName = "KGNDate-tvOS"
-            ReferencedContainer = "container:KGNdate.xcodeproj">
+            ReferencedContainer = "container:KGNDate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -67,7 +67,7 @@
             BlueprintIdentifier = "6412C2D81D29FE0E00C78066"
             BuildableName = "KGNDate.framework"
             BlueprintName = "KGNDate-tvOS"
-            ReferencedContainer = "container:KGNdate.xcodeproj">
+            ReferencedContainer = "container:KGNDate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -85,7 +85,7 @@
             BlueprintIdentifier = "6412C2D81D29FE0E00C78066"
             BuildableName = "KGNDate.framework"
             BlueprintName = "KGNDate-tvOS"
-            ReferencedContainer = "container:KGNdate.xcodeproj">
+            ReferencedContainer = "container:KGNDate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
