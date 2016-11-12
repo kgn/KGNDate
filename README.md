@@ -7,7 +7,7 @@
 [![License](http://img.shields.io/badge/License-MIT-lightgrey.svg)](/LICENSE)
 
 [![Build Status](https://travis-ci.org/kgn/KGNDate.svg)](https://travis-ci.org/kgn/KGNDate)
-[![Test Coverage](http://img.shields.io/badge/Tests-100%25-green.svg)]()
+[![Test Coverage](http://img.shields.io/badge/Tests-20%25-green.svg)]()
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-Compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/KGNDate.svg)](https://cocoapods.org/pods/KGNDate)
 [![CocoaPods Platforms](https://img.shields.io/cocoapods/p/KGNDate.svg)](https://cocoapods.org/pods/KGNDate)
@@ -28,7 +28,7 @@ github "kgn/KGNDate"
 
 
 ## Progress
-- [X] Badges
+- [ ] Badges
 - [ ] Tests
 - [ ] Travis
 - [X] Carthage
