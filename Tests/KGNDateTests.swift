@@ -110,6 +110,21 @@ class KGNDateFormatTests: XCTestCase {
         XCTAssertEqual(format, "September 9th, 2016")
     }
     
+    func testFormatNone() {
+        let format = date(from: "14-01-01").format(day: .none, month: .none, year: .none)
+        XCTAssertEqual(format, "")
+    }
+    
+    func testFormatShort() {
+        let format = date(from: "14-02-11").format(day: .short, month: .short, year: .short)
+        XCTAssertEqual(format, "Feb 11, 14")
+    }
+    
+    func testFormatLong() {
+        let format = date(from: "14-05-21").format(day: .long, month: .long, year: .long)
+        XCTAssertEqual(format, "May 21st, 2014")
+    }
+    
 }
 
 // TODO: build out and test more

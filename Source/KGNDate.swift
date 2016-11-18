@@ -55,7 +55,7 @@ extension Date {
         return calendar.date(byAdding: dateComp, to: self) ?? self
     }
     
-    public func format(month: DateFormatLength = .long, day: DateFormatLength = .long, year: DateFormatLength = .long, calendar: Calendar = Calendar.current) -> String {
+    public func format(day: DateFormatLength = .long, month: DateFormatLength = .long, year: DateFormatLength = .long, calendar: Calendar = Calendar.current) -> String {
         let monthValue = self.component(.month, calendar: calendar)
         let dayValue = self.component(.day, calendar: calendar)
         let yearValue = self.component(.year, calendar: calendar)
